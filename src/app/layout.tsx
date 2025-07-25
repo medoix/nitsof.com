@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Header } from "@/components/Header";
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,11 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: {
-    template: '%s | NITSOF',
-    default: 'NITSOF - Innovative Shopify Apps',
-  },
-  description: 'NITSOF builds and supports robust Shopify applications trusted by thousands of merchants to grow their business.',
+  title: "NITSOF - Powerful Shopify Apps",
+  description:
+    "Explore our collection of powerful Shopify applications designed to optimize your store, enhance customer engagement, and boost your sales.",
 };
 
 export default function RootLayout({
@@ -27,12 +26,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} bg-gray-900`}
+    >
+      <body className="flex min-h-screen flex-col text-gray-200">
         <Header />
-        {children}
+        <main
+          className="relative flex-grow bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/images/hero-background.jpg')" }}
+        >
+          <div className="absolute inset-0 bg-black/75 sm:bg-transparent sm:from-black/95 sm:to-black/25 sm:bg-gradient-to-r" />
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
