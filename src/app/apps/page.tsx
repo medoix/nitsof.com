@@ -16,7 +16,7 @@ export default function Apps() {
           Discover Our Applications
         </h1>
 
-        <p className="mx-auto mt-4 max-w-x2 text-gray-300 sm:text-xl/relaxed">
+        <p className="mx-auto mt-4 max-w-2xl text-gray-300 sm:text-xl/relaxed">
           Explore our collection of powerful Shopify applications designed to
           optimize your store, enhance customer engagement, and boost your
           sales.

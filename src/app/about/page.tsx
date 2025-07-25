@@ -28,7 +28,7 @@ export default function About() {
           <h1 className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-4xl font-extrabold text-transparent sm:text-5xl">
             About NITSOF
           </h1>
-          <p className="mx-auto mt-4 max-w-x2 text-gray-300 sm:text-xl/relaxed">
+          <p className="mx-auto mt-4 max-w-2xl text-gray-300 sm:text-xl/relaxed">
             We are a passionate team of developers and e-commerce experts
             dedicated to creating high-quality, reliable, and user-friendly
             Shopify applications.

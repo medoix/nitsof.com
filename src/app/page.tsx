@@ -82,7 +82,7 @@ export default function Home() {
             Why Build with NITSOF?
           </h2>
           <p className="mt-4 text-gray-400">
-            We're more than just a developer; we're your partner in e-commerce success.
+            We&apos;re more than just a developer; we&apos;re your partner in e-commerce success.
           </p>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
