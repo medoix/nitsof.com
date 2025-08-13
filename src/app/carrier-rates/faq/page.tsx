@@ -16,7 +16,7 @@ export default function CarrierRatesFAQ() {
 
         <div className="rounded-lg border border-gray-800 bg-gray-900/50 p-6">
           <h3 className="text-lg font-bold text-white">How are shipping rates calculated?</h3>
-          <p className="mt-2 text-sm text-gray-300">Shipping rates are fetched in real-time from the carrier APIs based on the items in the cart and the customer's shipping address.</p>
+          <p className="mt-2 text-sm text-gray-300">Shipping rates are fetched in real-time from the carrier APIs based on the items in the cart and the customer&apos;s shipping address.</p>
         </div>
 
         <div className="rounded-lg border border-gray-800 bg-gray-900/50 p-6">

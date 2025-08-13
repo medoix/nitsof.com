@@ -29,6 +29,6 @@
     "typescript": "^5"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "next lint"
+    "*.{js,jsx,ts,tsx}": "next lint --dir ."
   }
 }
