@@ -7,8 +7,8 @@ import { usePathname } from "next/navigation";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/apps", label: "Our Apps" },
+  { href: "/#about", label: "About" },
+  { href: "/#apps", label: "Our Apps" },
 ];
 
 export default function Header() {
@@ -37,7 +37,7 @@ export default function Header() {
                 return (
                   <Link
                     key={link.href}
-                    href={link.href === '/about' ? '/#about' : (link.href === '/apps' ? '/#apps' : link.href)}
+                    href={link.href}
                     className={`rounded-md px-3 py-2 text-sm font-medium transition-colors ${
                       isActive
                         ? "bg-gray-800 text-white"
@@ -77,7 +77,7 @@ export default function Header() {
         <div className="md:hidden" id="mobile-menu">
           <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
             {navLinks.map((link) => (
-              <Link key={link.href} href={link.href === '/about' ? '/#about' : (link.href === '/apps' ? '/#apps' : link.href)} className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
+              <Link key={link.href} href={link.href} className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
                 {link.label}
               </Link>
             ))}
