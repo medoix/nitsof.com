@@ -35,12 +35,12 @@ export default function Home() {
 
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
-              href="/apps"
+              href="/#apps"
               className="block w-full rounded border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
             >
               Explore Our Apps
             </Link>
-            <Link href="/about" className="block w-full rounded border border-white px-12 py-3 text-sm font-medium text-white transition hover:bg-white hover:text-gray-900 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto">
+            <Link href="/#about" className="block w-full rounded border border-white px-12 py-3 text-sm font-medium text-white transition hover:bg-white hover:text-gray-900 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto">
               Learn More
             </Link>
           </div>
@@ -48,7 +48,7 @@ export default function Home() {
       </section>
 
       {/* Featured Apps Section */}
-      <section className="mx-auto max-w-screen-xl px-4 py-16 sm:py-24 lg:px-8">
+      <section id="apps" className="mx-auto max-w-screen-xl px-4 py-16 sm:py-24 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold text-white sm:text-4xl">
             Our Suite of Powerful Apps
@@ -57,50 +57,40 @@ export default function Home() {
             Tools designed to solve real-world problems for Shopify merchants.
           </p>
         </div>
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
-          <AppCard
-            name="Super Analytics"
-            description="Gain deep insights into your sales, customers, and products with advanced, easy-to-understand reports."
-            href="#"
-            icon={<AnalyticsIcon />}
-            isComingSoon
-          />
-          <AppCard
-            name="Loyalty Rewards"
-            description="Boost customer retention and lifetime value with a customizable points and rewards program."
-            href="#"
-            icon={<LoyaltyIcon />}
-            isComingSoon
-          />
-        </div>
+        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <AppCard
+          name="Carrier Rates"
+          description="Connect up carriers to your Shopify store to fetch real-time live carrier rates at checkout."
+          href="/carrier-rates"
+          icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 16.5c-2.1 0-3.5-1.4-3.5-3.5s1.4-3.5 3.5-3.5h15c2.1 0 3.5 1.4 3.5 3.5s-1.4 3.5-3.5 3.5h-15Z" /><path d="m8 16-1.5-1.5L8 13" /><path d="M16 8l1.5 1.5L16 11" /></svg>}
+        />
+        <AppCard
+          name="Loyalty Rewards"
+          description="Boost customer retention and lifetime value with a customizable points and rewards program."
+          href="#"
+          icon={<LoyaltyIcon />}
+          isComingSoon
+        />
+        {/* Add more AppCard components here as you plan new apps */}
+      </div>
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="mx-auto max-w-screen-xl px-4 py-16 sm:py-24 lg:px-8">
+      <section id="about" className="mx-auto max-w-screen-xl px-4 py-16 sm:py-24 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold text-white sm:text-4xl">
-            Why Build with NITSOF?
+            About NITSOF
           </h2>
-          <p className="mt-4 text-gray-400">
-            We&apos;re more than just a developer; we&apos;re your partner in e-commerce success.
+          <p className="prose prose-lg prose-invert mx-auto mt-4">
+            We are a passionate team of developers and e-commerce experts
+            dedicated to creating high-quality, reliable, and user-friendly
+            Shopify applications.
           </p>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
-          <FeatureCard
-            title="Reliable Performance"
-            description="Our apps are built for scale, ensuring they run smoothly without slowing down your store."
-            icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18" /><polyline points="17 6 23 6 23 12" /></svg>}
-          />
-          <FeatureCard
-            title="Expert Support"
-            description="Get fast, friendly, and helpful support from our team of Shopify experts."
-            icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>}
-          />
-          <FeatureCard
-            title="User-Friendly Design"
-            description="Intuitive interfaces that feel like a natural part of your Shopify admin."
-            icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><line x1="3" y1="9" x2="21" y2="9" /><line x1="9" y1="21" x2="9" y2="9" /></svg>}
-          />
+          <FeatureCard title="Uncompromising Quality" description="We build robust, reliable, and performant apps that you can depend on." icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>} />
+          <FeatureCard title="Merchant-Focused" description="Your success is our success. We design solutions to solve your real-world problems." icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>} />
+          <FeatureCard title="Continuous Innovation" description="We are always exploring new technologies and strategies to keep you ahead of the curve." icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-3m0-7.98a9 9 0 0 1 7.95-7.95M5 19h14" /><path d="M7.5 14.5c0 0 2-2.5 5-2.5s5 2.5 5 2.5" /></svg>} />
         </div>
       </section>
     </div>

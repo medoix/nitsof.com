@@ -28,7 +28,7 @@ interface AppCardProps {
 
 export const AppCard = ({ name, description, href, icon, isComingSoon = false }: AppCardProps) => {
   return (
-    <div className="relative overflow-hidden rounded-lg border border-gray-800 bg-gray-900/50 p-6 transition-all hover:border-blue-500/50 hover:bg-gray-900">
+    <Link href={href} className="group relative block overflow-hidden rounded-lg border border-gray-800 bg-gray-900/50 p-6 transition-all hover:border-blue-500/50 hover:bg-gray-900">
       <div className="flex items-start gap-4">
         <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-gray-800 text-blue-400">
           {icon}
@@ -38,10 +38,10 @@ export const AppCard = ({ name, description, href, icon, isComingSoon = false }:
           <p className="mt-1 text-sm text-gray-400">{description}</p>
         </div>
       </div>
-      <Link href={href} className="group mt-4 inline-flex items-center gap-2 text-sm font-medium text-blue-400 hover:text-blue-300">
+      <div className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-blue-400">
         Learn More <ArrowRightIcon />
-      </Link>
-      {isComingSoon && <div className="absolute top-2 right-2 rounded-full bg-yellow-500/10 px-2 py-0.5 text-xs font-medium text-yellow-400">Coming Soon</div>}
-    </div>
+      </div>
+      {isComingSoon && !href && <div className="absolute top-2 right-2 rounded-full bg-yellow-500/10 px-2 py-0.5 text-xs font-medium text-yellow-400">Coming Soon</div>}
+    </Link>
   );
 };
